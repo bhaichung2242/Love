@@ -4,23 +4,23 @@ const message = document.getElementById("message");
 
 let noClickCount = 0;
 
+// When YES is clicked
 yesBtn.addEventListener("click", () => {
   message.innerHTML =
-    "YAYYYY 🎉💖 Best decision ever! You just made me so happy 🥰";
+    "YAYYYY 🎉💖 You just made me the happiest person alive! 🥰💍";
 });
 
+// When NO is clicked
 noBtn.addEventListener("click", () => {
   noClickCount++;
 
   if (noClickCount === 1) {
-    message.innerHTML = "😢 Are you sure? Think once more...";
+    message.innerHTML = "😢 Are you sure? Think one more time...";
   } else if (noClickCount === 2) {
-    message.innerHTML = "🥺 My heart says YES already...";
-  } else if (noClickCount === 3) {
-    message.innerHTML = "😆 Okay okay, this NO is broken now!";
-    noBtn.innerText = "Yes 💖";
-    noBtn.style.backgroundColor = "#ff4d6d";
-  } else {
-    message.innerHTML = "💍 Destiny accepted YES for you 😍";
+    message.innerHTML =
+      "😆 Oops! NO button disappeared... Only YES is allowed 💖";
+    noBtn.style.display = "none"; // Hide NO button
+    yesBtn.innerHTML = "YES 💖😍"; // Make YES more attractive
+    yesBtn.style.transform = "scale(1.2)";
   }
 });
