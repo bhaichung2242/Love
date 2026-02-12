@@ -3,6 +3,7 @@ body {
   height: 100vh;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #ff758c, #ff7eb3);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +35,23 @@ button {
   font-size: 16px;
   transition: 0.3s;
 }
+#yesImage {
+  margin-top: 20px;
+  width: 200px;
+  display: none; /* hidden at first */
+  animation: pop 0.6s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 #yesBtn {
   background-color: #ff4d6d;
@@ -50,4 +68,21 @@ button {
   font-size: 18px;
   font-weight: bold;
   color: #ff4d6d;
+}
+#yesImage {
+  margin-top: 20px;
+  width: 200px;
+  display: none; /* hidden at first */
+  animation: pop 0.6s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

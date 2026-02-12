@@ -1,26 +1,27 @@
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const message = document.getElementById("message");
+const yesImage = document.getElementById("yesImage");
 
 let noClickCount = 0;
 
-// When YES is clicked
+// YES button click
 yesBtn.addEventListener("click", () => {
   message.innerHTML =
-    "YAYYYY 🎉💖 You just made me the happiest person alive! 🥰💍";
+    "YAYYYY 🎉💖 You said YES! This is the best day of my life 🥰💍";
+  yesImage.style.display = "block"; // show image
 });
 
-// When NO is clicked
+// NO button click
 noBtn.addEventListener("click", () => {
   noClickCount++;
 
   if (noClickCount === 1) {
     message.innerHTML = "😢 Are you sure? Think one more time...";
   } else if (noClickCount === 2) {
-    message.innerHTML =
-      "😆 Oops! NO button disappeared... Only YES is allowed 💖";
-    noBtn.style.display = "none"; // Hide NO button
-    yesBtn.innerHTML = "YES 💖😍"; // Make YES more attractive
+    message.innerHTML = "😆 NO disappeared… Only YES remains 💖";
+    noBtn.style.display = "none";
+    yesBtn.innerHTML = "YES 💖😍";
     yesBtn.style.transform = "scale(1.2)";
   }
 });
